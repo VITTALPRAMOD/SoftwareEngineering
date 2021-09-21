@@ -1,1 +1,17 @@
-Home Security System
+Project Name : Hotel Administration Application
+
+Project discription:
+
+The HOTEL ADMINISTRATION is a web-based application . This main objective of the system is to maintain 
+the HOTEL Management Information. This system is made to carry a long list of items reports, Customer Bills, 
+Table Service Details, Category Details, Customer individual Items bill and Items final bill,  Staff Expenses 
+Daily bills and Monthly  bills, Company transactions and so on.
+
+Language - C# using Visual Studio
+
+The System Should provide the administrator with the convenience such as adding accountant and pub management details day-wise:
+
+Preparing the Customer Bills.
+Maintain the Category Details.
+Maintain the Table Service Details.
+Maintain the Items Reports.
