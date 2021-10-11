@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin" %>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<style>
+#Main
+{
+    background-image:url("Images/aquaimages.jpg");
+    height:700px;
+    width:1340px;
+}
+#header
+{
+    text-align:center;
+    color:White;
+    height:50px;
+     margin-left:100px;
+     margin-top:50px;
+}
+#Body
+{
+    border-style:groove;
+    background-image:url('Images/stage.png');
+    margin-left:160px;
+    height:700px;
+    width:1000px;
+     border-buttom-left-radius: 2em;
+      border-buttom-right-radius: 2em;
+}
+#menu
+{
+    margin-top:50px;
+    border:groove;
+    height:50px;
+    width:1000px;
+    margin-left:160px;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+}
+div.menu a
+{
+    display: inline-block;
+    padding: 0 20px;
+    background:#3A332C;
+    border:1px solid #5E544A;
+    color:#C4B09C;
+    text-decoration:none;
+    line-height: 27px;
+ margin-left:60px;
+ margin-top:15px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: bold;
+        font-size: 12px;
+        font-family: Arial;
+        width: 61px;
+    }
+
+div.menu a:hover, div.menu a.current
+{
+    background:#484037;
+    color:#E6D4C3;
+}
+</style>
+<html id="Main" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Protection</title>
+    <div  id="header" 
+    style="background-image:url('Images/title.png'); width: 1167px;">
+  
+        </div>
+    
+</head>
+<div id="menu">
+<div class="menu">
+<a  href="Home.aspx">Home</a>
+<a  href="FilesApprove.aspx">FileApprove</a>
+<a  href="FileSearch.aspx">Files</a>
+<a  href="Chart.aspx">Chart</a>
+<a  href="Users.aspx">User's</a>
+<a  href="Home.aspx">Logout</a>
+</div>
+</div>
+<body >
+
+    <form id="form1" runat="server">
+    
+   
+    <div id="Body">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+ 
+    </form>
+</body>
+</html>
