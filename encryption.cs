@@ -47,6 +47,32 @@ public static string Encrypt(string toEncrypt, string fileext, bool useHashing)
         return Convert.ToBase64String(resultArray, 0, resultArray.Length);
 
     }
+    public void register(string id, string unam, string ps, string num, string em, string city, string fnm, string dat, string ip4addr)
+    {
+        try
+        {
+            cn.Open();
+            com = new SqlCommand("insert into registration(userid,usernam,password,contactno,email,city,filenam,dat,ipaddr)values(@userid,@usernam,@password,@contactno,@email,@city,@filenam,@dat,@ipaddr)", cn);
+
+            com.Parameters.AddWithValue("@userid", id);
+            com.Parameters.AddWithValue("@usernam", unam);
+            com.Parameters.AddWithValue("@password", ps);
+            com.Parameters.AddWithValue("@contactno", num);
+            com.Parameters.AddWithValue("@email", em);
+            com.Parameters.AddWithValue("@city", city);
+            com.Parameters.AddWithValue("@filenam", fnm);
+            com.Parameters.AddWithValue("@dat", dat);
+            com.Parameters.AddWithValue("@ipaddr", ip4addr);
+            com.ExecuteNonQuery();
+            cn.Close();
+
+        }
+        catch (Exception e)
+        {
+           
+        }
+    }
+    
 // TODO Decryption 
     
     }
