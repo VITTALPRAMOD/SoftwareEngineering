@@ -1,4 +1,3 @@
-
 using System;
 using System.Data;
 using System.Configuration;
@@ -73,6 +72,15 @@ public static string Encrypt(string toEncrypt, string fileext, bool useHashing)
         }
     }
     
-// TODO Decryption 
+public DataSet checkuser(string usr, string psw, string id)
+    {
+        cn.Open();
+        SqlDataAdapter adt = new SqlDataAdapter("select usernam,password,userid from registration where usernam='" + usr + "' and password='" + psw + "' and userid='" + id + "'", cn);
+        DataSet da = new DataSet();
+        adt.Fill(da);
+        cn.Close();
+        return da;
+
+    }
     
     }
