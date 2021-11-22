@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -139,8 +139,8 @@ public partial class Fileupload : System.Web.UI.Page
 
             myNetworkCredential = new NetworkCredential();
 
-            myNetworkCredential.UserName = "pramod09";
-            myNetworkCredential.Password = "software_engineering";
+            myNetworkCredential.UserName = "CloudComputing";
+            myNetworkCredential.Password = "publicclouds";
             myFtpWebRequest.Credentials = myNetworkCredential;
 
             myFtpWebRequest.Method = WebRequestMethods.Ftp.UploadFile;

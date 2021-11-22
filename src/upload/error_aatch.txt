@@ -1,0 +1,1 @@
+a network-Related or instance -spefic error occurred while Establish a connection to sql Servr.the server was not found or was not accesible .verify that instance name is correct and  and that Sql server is configured to allow remote connection.(provide :sql Network Interface,error:50-Local Database Rutime error occurred.The specified LocalDB instance Does not exist

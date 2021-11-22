@@ -1,0 +1,58 @@
+
+File Upload:
+--------------
+
+        FileUpload1.SaveAs(Server.MapPath("~/upload/") + FileUpload1.FileName);
+        f = Path.GetFileNameWithoutExtension(FileUpload1.FileName);
+        st = Path.GetFileName(FileUpload1.FileName);
+        ml = Server.MapPath("~/upload/");
+        nww = FileUpload1.FileName;
+        ty = Path.GetExtension(FileUpload1.FileName);
+        kk = ml + f + ty;       
+
+        FileInfo toup = new FileInfo(kk);
+
+        FtpWebRequest request = (FtpWebRequest)WebRequest.Create(new Uri("ftp://ftp.drivehq.com/" + "/" + toup.Name));
+
+        request.Method = WebRequestMethods.Ftp.UploadFile;
+
+        request.Credentials = new NetworkCredential("CloudComputing","publicclouds");
+
+        Stream ftpstream = request.GetRequestStream();
+        FileStream file = File.OpenRead(kk);
+
+        int length = 1024;
+        byte[] buffer = new byte[length];
+        int byteread = 0;
+
+        do
+        {
+            byteread = file.Read(buffer, 0, length);
+            ftpstream.Write(buffer, 0, byteread);
+        }
+
+        while (byteread != 0);
+        file.Close();
+        ftpstream.Close();
+
+        Label1.Text = "File Uploaded..";
+
+
+
+File Download:
+-----------------
+
+
+ WebClient request = new WebClient();
+
+        request.Credentials = new NetworkCredential("CloudComputing","publicclouds");
+
+        byte[] filedata = request.DownloadData("ftp://ftp.drivehq.com/" + "/"+TextBox1.Text); // textbox value = Filename
+
+        FileStream file = File.Create("D:\\"+ TextBox1.Text);   // textbox value = Filename
+
+        file.Write(filedata,0,filedata.Length);
+
+        file.Close();
+
+        Label1.Text = "File Downloaded";
