@@ -139,8 +139,8 @@ public partial class Fileupload : System.Web.UI.Page
 
             myNetworkCredential = new NetworkCredential();
 
-            myNetworkCredential.UserName = "CloudComputing";
-            myNetworkCredential.Password = "publicclouds";
+            myNetworkCredential.UserName = "pramod09";
+            myNetworkCredential.Password = "Vittal@1991";
             myFtpWebRequest.Credentials = myNetworkCredential;
 
             myFtpWebRequest.Method = WebRequestMethods.Ftp.UploadFile;
